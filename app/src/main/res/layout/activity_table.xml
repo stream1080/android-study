@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    tools:context=".TableActivity">
+
+    <TableRow>
+        <TextView
+            android:text="0"
+            android:layout_span="4"
+            android:background="#E91E63"
+            android:layout_height="80dp"/>
+
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:text="清除"
+            android:layout_span="2"
+            android:background="#E91E63"
+            android:layout_height="80dp"/>
+        <Button
+            android:text="清空"
+            android:layout_marginEnd="10dp"
+            android:layout_span="2"
+            android:background="#E91E63"
+            android:layout_height="80dp"/>
+    </TableRow>
+
+    <TableRow>
+        <Button android:text="+"/>
+        <Button android:text="-"/>
+        <Button android:text="x"/>
+        <Button android:text="/"/>
+    </TableRow>
+    <TableRow>
+        <Button android:text="1"/>
+        <Button android:text="2"/>
+        <Button android:text="3"/>
+        <Button android:text="4"/>
+    </TableRow>
+    <TableRow>
+        <Button android:text="5"/>
+        <Button android:text="6"/>
+        <Button android:text="7"/>
+        <Button android:text="8"/>
+    </TableRow>
+    <TableRow>
+        <Button android:text="+"/>
+        <Button android:text="-"/>
+        <Button android:text="x"/>
+        <Button android:text="/"/>
+    </TableRow>
+
+</TableLayout>

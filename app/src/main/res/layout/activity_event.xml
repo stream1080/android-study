@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EventActivity">
+
+    <EditText
+        android:id="@+id/showText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"/>
+
+    <Button
+        android:id="@+id/btn_event_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity Event"
+        android:textAllCaps="false"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tv_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/btn_anonymous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="匿名内部类"
+        android:onClick="showtext"
+        android:textAllCaps="false"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/btn_inner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="内部类"
+        android:textAllCaps="false"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/btn_outer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="外部类"
+        android:textAllCaps="false"
+        android:textSize="30sp"/>
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="showTextView"
+        android:onClick="标签方式"
+        android:textAllCaps="false"
+        android:textSize="30sp"/>
+
+    <com.example.myapplication.widge.MyButton
+        android:id="@+id/btn_mybutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MyButton"
+        android:textAllCaps="false"
+        android:textSize="30sp"/>
+
+
+</LinearLayout>
