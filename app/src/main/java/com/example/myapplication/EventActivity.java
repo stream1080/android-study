@@ -31,7 +31,6 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
 
         showText = findViewById(R.id.showText);
 
-
         btn_anonymous = findViewById(R.id.btn_anonymous);
         tv_event = findViewById(R.id.tv_event);
         btn_inner = findViewById(R.id.btn_inner);
@@ -54,8 +53,6 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
         btn_outer.setOnClickListener(outerEvent);
         btn_mybutton.setOnClickListener(onClicker);
 
-
-
         btn_event_1 = findViewById(R.id.btn_event_1);
         //注册监听器
         btn_event_1.setOnClickListener(this);
@@ -74,7 +71,6 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
 
     public void showtext(View view) {
     }
-
 
     class OnClicker implements View.OnClickListener{
 
