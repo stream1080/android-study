@@ -16,13 +16,10 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
     private TextView showText;
     private Button btn_event_1;
 
-
     private Button btn_anonymous,btn_inner,btn_outer;
     private MyButton btn_mybutton;
     private TextView tv_event;
     private OuterEvent outerEvent;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +44,11 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
 
         //初始化
         OnClicker onClicker = new OnClicker();
+
         //注册监听器，参数是对象
         btn_inner.setOnClickListener(onClicker);
+        //初始化外部类
+
         outerEvent = new OuterEvent(tv_event);
         btn_outer.setOnClickListener(outerEvent);
         btn_mybutton.setOnClickListener(onClicker);
