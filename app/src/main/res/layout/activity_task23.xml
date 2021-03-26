@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="400dp"
     android:orientation="vertical"
-
     tools:context=".Task23Activity">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"

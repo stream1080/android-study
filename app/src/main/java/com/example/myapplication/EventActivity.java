@@ -27,12 +27,12 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_event);
 
         showText = findViewById(R.id.showText);
-
         btn_anonymous = findViewById(R.id.btn_anonymous);
         tv_event = findViewById(R.id.tv_event);
         btn_inner = findViewById(R.id.btn_inner);
         btn_outer = findViewById(R.id.btn_outer);
         btn_mybutton = findViewById(R.id.btn_mybutton);
+
         //匿名内部类
         btn_anonymous.setOnClickListener(new View.OnClickListener() {
             @Override
