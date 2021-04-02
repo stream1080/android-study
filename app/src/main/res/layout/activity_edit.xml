@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context=".EditActivity">
+
+    <EditText
+        android:id="@+id/et_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:hint="请输入用户名"
+        android:inputType="text"
+        android:paddingVertical="10dp"
+        android:paddingStart="20dp"
+        android:drawableStart="@drawable/me_select"
+        android:drawableTint="#03A9F4"
+        android:background="@drawable/background_edit"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_below="@+id/et_user"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:paddingVertical="10dp"
+        android:paddingStart="20dp"
+        android:drawableStart="@drawable/f_select"
+        android:drawableTint="#03A9F4"
+        android:background="@drawable/background_edit"/>
+
+    <Button
+        android:layout_below="@+id/et_password"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="28sp"
+        android:layout_centerHorizontal="true"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="60dp"
+        android:background="@drawable/background_button"
+        android:textAllCaps="false"/>
+
+
+</RelativeLayout>

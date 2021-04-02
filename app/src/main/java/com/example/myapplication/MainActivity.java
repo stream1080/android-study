@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this,ButtonActivity.class);
                     break;
                 case R.id.btn_edit:
-                    intent = new Intent(MainActivity.this,TableActivity.class);
+                    intent = new Intent(MainActivity.this,EditActivity.class);
                     break;
             }
             startActivity(intent);

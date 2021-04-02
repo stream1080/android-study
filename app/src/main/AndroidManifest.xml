@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".ButtonActivity"></activity>
+        <activity android:name=".RadioButton"></activity>
+        <activity android:name=".EditActivity" />
+        <activity android:name=".ButtonActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TextViewActivity"></activity>
+        <activity android:name=".TextViewActivity" />
         <activity android:name=".EventActivity" />
         <activity android:name=".RelativeActivity" />
         <activity android:name=".GridActivity" />

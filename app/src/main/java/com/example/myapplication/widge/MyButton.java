@@ -1,9 +1,11 @@
 package com.example.myapplication.widge;
 
 import android.content.Context;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.EventLog;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 
 
@@ -14,7 +16,6 @@ public class MyButton extends AppCompatButton {
     public MyButton(Context context) {
         super(context);
     }
-
     public MyButton(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
@@ -28,5 +29,17 @@ public class MyButton extends AppCompatButton {
             break;
         }
         return false;
+    }
+    //先
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return super.onKeyDown(keyCode, event);
+
+    }
+    //后
+    @Override
+    protected void onFocusChanged(boolean focused, int direction, Rect previouslyFocusedRect) {
+        super.onFocusChanged(focused, direction, previouslyFocusedRect);
+
     }
 }
