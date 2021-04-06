@@ -73,11 +73,10 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
     }
 
     class OnClicker implements View.OnClickListener{
-
         @Override
         public void onClick(View v) {
             Log.i("Onclik", "onClick: Mybutton");
-            tv_event.setText(((Button)v).getText()+ "inner：被点击率了" );
+            tv_event.setText(((Button)v).getText()+ "inner：被点击了" );
         }
     }
 }

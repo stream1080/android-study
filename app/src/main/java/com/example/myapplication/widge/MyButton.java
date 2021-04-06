@@ -33,13 +33,13 @@ public class MyButton extends AppCompatButton {
     //先
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Log.i(TAG, "onKeyDown: ");
         return super.onKeyDown(keyCode, event);
-
     }
     //后
     @Override
     protected void onFocusChanged(boolean focused, int direction, Rect previouslyFocusedRect) {
+        Log.i(TAG, "onFocusChanged: ");
         super.onFocusChanged(focused, direction, previouslyFocusedRect);
-
     }
 }
