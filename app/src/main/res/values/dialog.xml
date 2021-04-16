@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="dialogStyle" parent="Theme.AppCompat.DayNight.Dialog">
-
-        <item name="android:windowBackground">
-            @color/transpanrt
-        </item>
+        <item name="android:windowBackground">@color/transparent</item>
     </style>
-
-
 </resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/other"
+        android:duration="200"/>
+
+    <item android:drawable="@drawable/hard"
+        android:duration="200"/>
+
+    <item android:drawable="@drawable/f_select"
+        android:duration="200"/>
+
+    <item android:drawable="@drawable/me_select"
+        android:duration="200"/>
+
+    <item android:drawable="@drawable/other"
+        android:duration="200"/>
+
+</animation-list>
