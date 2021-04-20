@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="150dp">
+
+    <CheckBox
+        android:focusable="false"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <ImageView
         android:id="@+id/item_iv"
@@ -8,9 +16,34 @@
         android:layout_height="200dp"
         android:scaleType="fitCenter"/>
 
-   <RelativeLayout
 
+   <LinearLayout
        android:layout_width="match_parent"
-       android:layout_height="200dp"/>
+       android:layout_height="200dp"
+       android:orientation="vertical"
+       android:gravity="center">
 
-</RelativeLayout>
+       <TextView
+           android:id="@+id/tv_title"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="30sp"
+           android:textStyle="bold|italic"/>
+
+       <TextView
+           android:id="@+id/tv_content"
+           android:layout_marginTop="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="28sp"/>
+       <Button
+           android:focusable="false"
+           android:id="@+id/item_btn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="确定"/>
+
+
+   </LinearLayout>
+
+</LinearLayout>

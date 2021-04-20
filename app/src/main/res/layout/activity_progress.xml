@@ -35,6 +35,4 @@
         android:indeterminateDrawable="@drawable/ani_pb"
         />
 
-
-
 </LinearLayout>
