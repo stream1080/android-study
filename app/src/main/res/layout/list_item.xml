@@ -43,7 +43,6 @@
            android:layout_height="wrap_content"
            android:text="确定"/>
 
-
    </LinearLayout>
 
 </LinearLayout>

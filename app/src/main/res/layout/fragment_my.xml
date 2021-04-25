@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/fg_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Hello blank Fragment"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/button_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Transfer to Activity"
+        android:textAllCaps="false"
+        android:textSize="28sp"/>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentActivity">
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_message"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/drawable_rb_message"
+            android:checked="true"
+            android:text="消息"/>
+
+        <RadioButton
+            android:id="@+id/rb_phone"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/drawable_rb_phone"
+            android:checked="true"
+            android:text="通讯录"/>
+
+        <RadioButton
+            android:id="@+id/rb_discover"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/drawable_rb_discovery"
+            android:checked="true"
+            android:text="发现"/>
+
+        <RadioButton
+            android:id="@+id/rb_me"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/drawable_rb_me"
+            android:checked="true"
+            android:text="我"/>
+
+
+    </RadioGroup>
+    <View
+        android:id="@+id/v"
+        android:layout_above="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"/>
+
+    <FrameLayout
+        android:id="@+id/f1_content"
+        android:layout_above="@id/v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</RelativeLayout>
