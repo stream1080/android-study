@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".FragmentActivity">
+        <activity android:name=".TabLayoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GridViewActivity" />
-        <activity android:name=".ListViewActivity">
+        <activity android:name=".FragmentActivity">
 
         </activity>
+        <activity android:name=".GridViewActivity" />
+        <activity android:name=".ListViewActivity"></activity>
         <activity android:name=".ProgressActivity" />
         <activity android:name=".AlertDialogActivity" />
         <activity android:name=".CheckBoxActivity3" />
