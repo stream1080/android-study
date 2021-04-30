@@ -9,18 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity android:name=".ToActivity" android:label="To">
+
+<!--            <intent-filter>-->
+<!--            隐式调用-->
+<!--                <action android:name="test.jump" />-->
+<!--                <category android:name="qq.sss" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
         <activity android:name=".TabLayoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".FragmentActivity">
 
         </activity>
+        <activity android:name=".FragmentActivity"></activity>
         <activity android:name=".GridViewActivity" />
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".ListViewActivity" />
         <activity android:name=".ProgressActivity" />
         <activity android:name=".AlertDialogActivity" />
         <activity android:name=".CheckBoxActivity3" />
@@ -35,8 +38,22 @@
         <activity android:name=".TableActivity" />
         <activity android:name=".LinearMainActivity3" />
         <activity android:name=".Task23Activity" />
-        <activity android:name=".MainActivity2" />
+        <activity android:name=".FromActivity" >
+                <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+
+                        <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+        </activity>
         <activity android:name=".FirstActivity" />
+            <receiver android:name=".widge.MyStaticReceiver"/>
     </application>
 
 </manifest>
+
+
+<!--<intent-filter>-->
+<!--<action android:name="android.intent.action.MAIN" />-->
+
+<!--<category android:name="android.intent.category.LAUNCHER" />-->
+<!--</intent-filter>-->
