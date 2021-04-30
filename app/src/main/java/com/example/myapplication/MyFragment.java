@@ -45,7 +45,7 @@ public class MyFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my,container,false);
         TextView textView = view.findViewById(R.id.fg_tv);
         Button fg_btn = view.findViewById(R.id.button_rg);
-        //        textView.setText(context);
+//                textView.setText(context);
 
         if(getArguments() != null){
             textView.setText(getArguments().getString("content"));

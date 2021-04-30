@@ -19,7 +19,7 @@ public class FragmentActivity extends AppCompatActivity implements MyFragment.IO
         setContentView(R.layout.activity_fragment);
         rg = findViewById(R.id.rg_tab);
 
-        f1 = new MyFragment("消息");
+        f1 = MyFragment.newInstance("消息");
 
         //getSupoort可以向前兼容
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -63,8 +63,8 @@ public class FragmentActivity extends AppCompatActivity implements MyFragment.IO
                             fragmentTransaction.show(f4);
                         }
                         break;
-
                 }
+                        fragmentTransaction.commitAllowingStateLoss();
             }
         });
 
@@ -90,6 +90,6 @@ public class FragmentActivity extends AppCompatActivity implements MyFragment.IO
 
     @Override
     public void onClick(String context) {
-
+        setTitle(context);
     }
 }
