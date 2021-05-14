@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".mysqlite.SqliteActivity">
+
+    <Button
+        android:id="@+id/btn_create_db"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="创建数据库"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/btn_update_db"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更新数据库"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/btn_delete_db"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除数据库"
+        android:textSize="30sp"/>
+
+
+</LinearLayout>
