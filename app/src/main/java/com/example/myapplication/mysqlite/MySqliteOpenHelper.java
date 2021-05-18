@@ -22,14 +22,15 @@ public class MySqliteOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "create Table student(ID INTERER primary key autoincrement,name varchar(20),telephone char(11)";//主键自增
+//        建表 主键自增必须用INTEGER
+        String sql = "create Table student(ID INTEGER primary key autoincrement,name varchar(20),telephone char(11))";
         db.execSQL(sql);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        //版本更新的时候，变更版本号
+        //版本更新的时候，变更版本号,
         VERSION = newVersion;
     }
 }

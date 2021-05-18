@@ -3,6 +3,7 @@ package com.example.myapplication.mysqlite;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -60,17 +61,35 @@ public class DataActivity extends AppCompatActivity implements View.OnClickListe
                 values.put("name",et_stu_name.getText().toString());
                 values.put("telephone",et_stu_tele.getText().toString());
                 sqLiteDatabase.insert("student",null,values);
-//                sqLiteDatabase.close();//关闭数据库，不用关
+
+//                第二种方法 sqLiteDatabase.execSQL("insert into student(name,telephone) values(name,telephone)");
+//                sqLiteDatabase.close();//关闭数据库，这里不用关
                 break;
             case R.id.btn_delete:
                 sqLiteDatabase = mySqliteOpenHelper.getWritableDatabase();
-// 未写               sqLiteDatabase.delete("student","name like ? and telephone like ?",new String[]{"%"+});//
+//                模糊查询
+                sqLiteDatabase.delete("student","name like ? and telephone like ?",new String[]{"%"+name+"%"});
                 break;
             case R.id.btn_update:
+                sqLiteDatabase = mySqliteOpenHelper.getWritableDatabase();
+                ContentValues values_update = new ContentValues();
+                values_update.put("name",name);
+                values_update.put("telephone",telephone);
+                sqLiteDatabase.update("student",values_update,"name =?",null);
 
                 break;
             case R.id.btn_query:
+                sqLiteDatabase = mySqliteOpenHelper.getReadableDatabase();
+                //返回一个游标
+                Cursor cursor = sqLiteDatabase.query("student",new String[]{"ID","name","telephone"},"name like ?",new String[]{name+"%"},null,null,null);
 
+
+                while (cursor.moveToNext()){
+                    int id = cursor.getInt(cursor.getColumnIndex("ID"));
+                    String name_query = cursor.getString(cursor.getColumnIndex("name"));
+                    String telephone_query = cursor.getString(cursor.getColumnIndex("telephone"));
+                //    tv_query.append(id+"%\t"+name_query);
+                }
                 break;
 
         }

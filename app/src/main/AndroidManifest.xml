@@ -9,7 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".mysqlite.DataActivity"></activity>
+        <activity android:name=".service.MyBindActivity"></activity>
+        <activity android:name=".service.MyStartServiceActivity" />
+
+        <service
+            android:name=".service.MyStartService"
+            android:enabled="true"
+            android:exported="true" /> <!-- 声明一下，MyBindService -->
+        <service
+            android:name=".service.MyBindService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".mysqlite.DataActivity" />
         <activity android:name=".mysqlite.SqliteActivity" />
         <activity android:name=".sharedpreferences.SharedPreferencesActivity">
             <intent-filter>
