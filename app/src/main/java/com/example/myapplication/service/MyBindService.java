@@ -14,15 +14,17 @@ import java.io.IOException;
 
 public class  MyBindService extends Service {
     private MyBinder myBinder;
+    private MediaPlayer mp;
 
     private class MyBinder extends Binder{
         public MyBindService getService(){
             return MyBindService.this;
         }
+
         public void playMusic(String path){
             try {
                 AssetFileDescriptor afd = getAssets().openFd(path);
-                MediaPlayer mp = new MediaPlayer();
+//                MediaPlayer mp = new MediaPlayer();
                 mp.reset();
                 mp.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
                 mp.prepare();
@@ -37,6 +39,8 @@ public class  MyBindService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         myBinder = new MyBinder();
-        return null;
+        return myBinder;
     }
+
+
 }

@@ -2,15 +2,18 @@ package com.example.myapplication.service;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.myapplication.R;
 
 public class MyBindActivity extends AppCompatActivity implements View.OnClickListener {
-
+    private ServiceConnection conn;
     private Button btn_bind,btn_unbind;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,15 +41,23 @@ public class MyBindActivity extends AppCompatActivity implements View.OnClickLis
         switch (v.getId()){
             case R.id.btn_bind:
                 Intent intent = new Intent(MyBindActivity.this,MyBindService.class);
-                intent.putExtra("start","MyStartService");//传递参数
-                startService(intent);
+                conn = new ServiceConnection() {
+                    @Override
+                    public void onServiceConnected(ComponentName name, IBinder service) {
+//                        MyBindService.MyBinder myBinder = new //未写完
+                    }
+
+                    @Override
+                    public void onServiceDisconnected(ComponentName name) {
+
+                    }
+                };
                 break;
 
             case R.id.btn_unbind:
-                Intent intent1 = new Intent(MyBindActivity.this,MyBindService.class);
-                intent1.putExtra("start","MyStartService");//传递参数
-                stopService(intent1);
+                unbindService(conn);
                 break;
+
         }
     }
 }

@@ -22,12 +22,14 @@ public class MyStartService extends Service {
     public void onCreate() {
         super.onCreate();
         iCreate += 1;
+        //只执行一次
         Log.i(TAG, "onCreate: "+iCreate);
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         iStart += 1;
+        //每次都执行
         Log.i(TAG, "onStartCommand: "+ iStart+Thread.currentThread());
         return super.onStartCommand(intent, flags, startId);
     }
