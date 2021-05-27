@@ -44,7 +44,8 @@ public class MyBindActivity extends AppCompatActivity implements View.OnClickLis
                 conn = new ServiceConnection() {
                     @Override
                     public void onServiceConnected(ComponentName name, IBinder service) {
-//                        MyBindService.MyBinder myBinder = new //未写完
+                        MyBindService.MyBinder myBinder = (MyBindService.MyBinder) service;
+                        myBinder.playMusic("dasong.mp3");
                     }
 
                     @Override
@@ -52,6 +53,7 @@ public class MyBindActivity extends AppCompatActivity implements View.OnClickLis
 
                     }
                 };
+                bindService(intent,conn,BIND_AUTO_CREATE);
                 break;
 
             case R.id.btn_unbind:

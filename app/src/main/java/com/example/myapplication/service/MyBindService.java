@@ -16,7 +16,8 @@ public class  MyBindService extends Service {
     private MyBinder myBinder;
     private MediaPlayer mp;
 
-    private class MyBinder extends Binder{
+
+    protected class MyBinder extends Binder{
         public MyBindService getService(){
             return MyBindService.this;
         }
@@ -24,7 +25,7 @@ public class  MyBindService extends Service {
         public void playMusic(String path){
             try {
                 AssetFileDescriptor afd = getAssets().openFd(path);
-//                MediaPlayer mp = new MediaPlayer();
+                mp = new MediaPlayer();
                 mp.reset();
                 mp.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
                 mp.prepare();
