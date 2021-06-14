@@ -32,7 +32,7 @@
         </activity>
         <activity android:name=".Handle.HandleActivity" />
         <activity android:name=".broadcast.DynamicActivity" />
-        <activity android:name=".SendStaticActivity" />
+        <activity android:name=".broadcast.SendStaticActivity" />
         <activity
             android:name=".ToActivity"
             android:label="To">
@@ -64,7 +64,7 @@
         <activity android:name=".Task23Activity" />
         <activity android:name=".FromActivity" />
         <activity android:name=".FirstActivity" /> <!-- 静态广播 -->
-        <receiver android:name=".widge.MyStaticReceiver">
+        <receiver android:name=".broadcast.MyStaticReceiver">
             <intent-filter>
                 <action android:name="new Static Broadcast" />
             </intent-filter>

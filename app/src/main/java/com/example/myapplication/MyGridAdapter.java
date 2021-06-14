@@ -48,7 +48,6 @@ public class MyGridAdapter extends BaseAdapter {
         }
         viewHoder.imageView.setImageResource(mPhotoGrid.get(position).getImageId());
         viewHoder.textView.setText(mPhotoGrid.get(position).getName());
-
         return convertView;
     }
 

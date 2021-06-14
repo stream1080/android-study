@@ -48,13 +48,15 @@ public class SharedPreferencesActivity extends AppCompatActivity implements View
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_save:
+                //写入数据
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("name",et_name.getText().toString());
                 editor.putString("password",et_password.getText().toString());
-                editor.apply();//写入数据
+                editor.apply();
                 break;
 
             case R.id.btn_read:
+                //读取数据
                 String name = sharedPreferences.getString("name","");
                 String password = sharedPreferences.getString("password","");
                 tv_show.setText(name+":"+password);

@@ -1,4 +1,4 @@
-package com.example.myapplication.widge;
+package com.example.myapplication.broadcast;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
